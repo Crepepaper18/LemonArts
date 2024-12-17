@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./Assets/Css/contact.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Pirata+One&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Press+Start+2P&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+<body>
+    <section class="navBar">
+        <div class="nav">
+            <div class="tabs">
+                <div class="logo"><img src="./Assets/Images/Media/logo.png" height="80px" width="80px"></div>
+                <a href="./index.html" class="home">Home</a>
+                <a href="./shop.html" class="shop">Shop</a>
+                <a href="index.html#gallery" class="Gallery">Gallery</a>
+                <a href="./contact.html" class="contactUs">Contact Us</a> 
+            </div>
+            <div class="buttons">
+                <a href="./shop.html"><button class="shopBut But">Shop</button></a>
+                <a href="index.html#footer"><button class="joinBut But">Join</button></a>
+            </div>
+        </div>
+    </section>
+    <section class="form">
+        <div class="heading">
+            <div class="main">Have something awesome in mind?</div>
+            <div class="p">Feel free to reach out for commission requests, feedback, or to share creative ideas. I’d love to collaborate and bring your vision to life! </div>
+        </div>
+        <div class="signUp">
+            <div class="can">
+                <div class="h">Contact Me:</div>
+                <div class="num">
+                    <div class="card">
+                        <div class="circle"><img src="./Assets/Images/Extra/Group 1.png"></div>
+                        <div class="content">
+                            <div class="n" style="font-size: 20px;">Whatsapp:</div>
+                            <div class="number" style="font-size: 18px;">+6290022785</div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="circle"><img src="./Assets/Images/Extra/Group 2.png"></div>
+                        <div class="content">
+                            <div class="n" style="font-size: 20px;">Email:</div>
+                            <div class="number" style="font-size: 18px;">lemonieartgallery@gmail.com</div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="circle"><img src="./Assets/Images/Extra/Group 3.png"></div>
+                        <div class="content">
+                            <div class="n" style="font-size: 20px;">Instagram:</div>
+                            <div class="number" style="font-size: 18px;">@lemonieartgallery</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="f">
+                <div class="field">
+                    <div class="label">Name *</div>
+                    <input type="text" name="from_name">
+                </div>
+                <div class="field">
+                <div class="label">Email *</div>
+                    <input type="text" name="from_email">
+                </div>
+                <div class="field">
+                    <div class="label">Message *</div>
+                    <textarea class="message" name="message"></textarea>
+                </div>
+                <input type="button" value="Submit" class="submit">
+            </div>
+        </div>
+    </section>
+    <section class="footer">
+        <div class="contact">
+            <div class="con">
+                <div class="head">Contact:</div>
+                <div class="numb">
+                    <div class="n" style="font-size: 28px;">Whatsapp:</div>
+                    <div class="number" style="font-size: 20px;">+6290022785</div>
+                </div>
+                <div class="mail">
+                    <div class="m" style="font-size: 28px;">Email:</div>
+                    <div class="email" style="font-size: 20px;">lemonieartgallery@gmail.com</div>
+                </div>
+            </div>
+            <div class="linkList">
+                <div class="col">
+                    <a href="index.html"  style="text-decoration: none; color: white;">Home</a>
+                    <a href="shop.html" style="text-decoration: none; color: white;">Shop</a>
+                    <a href="#" style="text-decoration: none; color: white;">Instagram</a> 
+                    </div>
+                    <div class="col">
+                    <a href="contact.html" style="text-decoration: none; color: white;">Contact Us</a>
+                    <a href="index.html#gallery" style="text-decoration: none; color: white;">Gallery</a>
+                    <a href="index.html#footer" style="text-decoration: none; color: white;">Sign Up</a>
+                    </div>
+            </div>
+        </div>
+        <hr>
+        <div class="copyright">© 2024 Lemon Arts. Celebrating artistry, originality, and imagination.</div>
+    </section>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            emailjs.init({publicKey:"S7jrWKBSRQTiq_SOp"});
+
+            document.querySelector('.submit').addEventListener('click', function () {
+                const fromName = document.querySelector('input[name="from_name"]').value;
+                const fromEmail = document.querySelector('input[name="from_email"]').value;
+                const message = document.querySelector('textarea[name="message"]').value;
+
+                if (!fromName || !fromEmail || !message) {
+                    alert("All fields are required!");
+                    return;
+                }
+
+                emailjs.send("service_zolksou", "template_81p707d", {
+                    from_name: fromName,
+                    from_email: fromEmail,
+                    message: message
+                })
+                .then(function (response) {
+                    alert("Message sent successfully!");
+                    document.querySelector('input[name="from_name"]').value = '';
+                    document.querySelector('input[name="from_email"]').value = '';
+                    document.querySelector('textarea[name="message"]').value = '';
+                    console.log("SUCCESS", response);
+                }, function (error) {
+                    alert("Failed to send message. Please try again.");
+                    console.log("FAILED", error);
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

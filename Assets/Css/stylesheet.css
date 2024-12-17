@@ -1,0 +1,505 @@
+body
+{
+    margin: 0;
+    font-family: 'Inter';
+}
+
+.nav
+{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    padding-bottom: 0;
+}
+
+.tabs
+{
+    display: flex;
+    margin-left: 10px;
+    align-items: center;
+}
+
+.logo
+{
+   font-size: 30px;
+   font-weight: 700;
+   margin-right: 40px;
+}
+
+.tabs>a
+{
+    color: black;
+    text-decoration: none;
+    margin-right:40px ;
+    font-size: 20px;
+}
+
+
+.buttons
+{
+    padding: 20px 20px 20px 0;
+}
+
+.But
+{
+    font-size: 15px;
+    padding: 10px;
+    width: 80px;
+}
+
+.But:active
+{
+    opacity: 0.5;
+}
+
+.shopBut
+{
+    color: white;
+    background-color: black;
+    cursor: pointer;
+}
+
+.joinBut
+{
+    color: black;
+    background-color: white;
+}
+
+.joinBut:hover
+{
+    color: white;
+    background-color: black;
+    cursor: pointer;
+}
+
+.fbut:hover
+{
+    color: white;
+    background-color: black;
+    cursor: pointer;
+}
+
+.fbut:active
+{
+    opacity: 0.5;
+}
+
+.slideshow-container 
+{
+    max-width: 1400px;
+    position: relative;
+    margin: auto;
+    margin-top:20px;
+    height: 700px;
+    overflow: hidden;
+}
+  
+.mySlides 
+{
+    display: none;
+}
+  
+
+.prev, .next 
+{
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+  
+
+.next 
+{
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+  
+
+.prev:hover, .next:hover 
+{
+    background-color: rgba(0,0,0,0.8);
+}
+  
+
+.text 
+{
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+  
+
+.numbertext 
+{
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+  
+
+.dot 
+{
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+  
+.active, .dot:hover 
+{
+    background-color: #717171;
+}
+  
+
+.fade 
+{
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+  
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
+.feature
+{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 100px;
+}
+
+.header
+{
+    font-size: 56px;
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: 900;
+}
+
+.paintFeature
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+.painting img
+{
+    height: 450px;
+    width:350px;
+}
+
+.f
+{
+    display: flex;
+    width: 300px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.heading
+{
+    margin:20px;
+    font-size: 36px;
+}
+
+.card
+{
+    width: 1200px;
+}
+
+.desc
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fbut
+{
+    padding: 10px;
+    border: solid black 1px;
+    width: 100px;
+    margin: 20px;
+    background-color: white;
+}
+
+.details
+{
+    height: 60px;
+}
+
+.box
+{
+    margin-top: 80px;
+}
+
+.gallery
+{
+    display: flex;
+    gap:20px;
+    padding:0 20px 0 20px;
+    flex-direction: row;
+    align-items: flex-end;
+}
+
+.gal
+{
+    position: relative;
+}
+
+.gal img
+{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+    transition: opacity 0.3s ease;
+}
+
+.photo
+{
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    align-items: start;
+    flex: 1;
+}
+
+.high
+{
+    height: 500px;
+    width: 100%;
+}
+
+.wide
+{
+    height: 250px;
+    width: 100%;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    opacity: 0; /* Initially invisible */
+    transition: opacity 0.3s ease; /* Smooth transition */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hover-text {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease; /* Smooth fade-in */
+}
+
+.gal:hover .overlay {
+    opacity: 1; /* Darken the image */
+}
+
+.gal:hover .hover-text {
+    opacity: 1; /* Show the text */
+}
+
+.footer
+{
+    margin-top:100px ;
+    width: 100%;
+    background-color: black;
+    color: white;
+    padding-top: 100px;
+}
+
+.contact
+{
+    display: flex;
+    justify-content: space-around;
+    margin: 100px 0px 100px 0px;
+    font-size: 36px;
+    height: 300px;
+}
+
+.con
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap:40px;
+}
+
+.email
+{
+    line-height: 36px;
+    margin-top: 20px;
+}
+
+.linkList
+{
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    gap:20px;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top:30px;
+}
+
+.col
+{
+    display: flex;
+    flex-direction: column;
+    gap:30px;
+}
+
+hr
+{
+    width: 80%;
+}
+
+.copyright
+{
+    text-align: center;
+    margin-top:20px;
+    padding-bottom: 20px;
+}
+
+.newsletter
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.nh
+{
+    flex:1;
+    text-align: center;
+}
+.connect
+{
+    display: flex;
+    flex:2;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap:50px;
+    margin-top: 20px;
+}
+
+.form
+{
+    display: flex;
+}
+
+.email
+{
+    line-height: 36px;
+    margin-top: 4px;
+}
+
+.inbox
+{
+    height: 36px; 
+    border: none;
+    width: 260px; 
+    font-size: 16px;
+}
+
+.inbox:focus
+{
+    outline: none;
+}
+
+.jbut
+{
+    height: 30px; 
+    border: solid white 1px;  
+    width: 64px;
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 6px;
+}
+
+.jbut:hover
+{
+    opacity:0.5;
+    cursor: pointer;
+}
+
+.jbut:active
+{
+    opacity: 0.5;
+}
+
+.bio
+{
+    display: flex;
+    flex-direction: column ;
+    margin-top: 100px;
+    gap:40px;
+}
+
+.div
+{
+    display: flex;
+    height: 100vh;
+    justify-content: space-around;
+}
+
+.bioImage
+{
+    height: 100%;
+}
+
+.bioImage img
+{
+    height: 90%;
+}
+
+.bioText
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 40%;
+    height: 90%;
+}
+
+.b1
+{
+    display: flex;
+    gap:20px;
+}
