@@ -33,5 +33,21 @@
         <button>Submit</button>
         
     </section>
+    <script>
+        // Function to extract query parameters from the URL
+        function getQueryParameter(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+    
+        // Get the product name from the query string
+        const productName = getQueryParameter("product");
+    
+        // Populate the "Product" input field if a product is selected
+        if (productName) {
+            document.getElementById("productName").value = decodeURIComponent(productName);;
+        }
+    </script>
+    
 </body>
 </html>
