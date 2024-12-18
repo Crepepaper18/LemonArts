@@ -20,6 +20,7 @@ jobs:
           echo "const API_KEY = '${{ secrets.API_KEY }}';" > api-keys.js
           echo "const SERVICE_ID = '${{ secrets.SERVICE_ID }}';" >> api-keys.js
            echo "const TEMPLATE_ID = '${{ secrets.TEMPLATE_ID }}';" >> api-keys.js
+           echo "const TEMPLATE_ID2 = '${{ secrets.TEMPLATE_ID2 }}';" >> api-keys.js
 
       # Step 3: Deploy the site (GitHub Pages Example)
       - name: Deploy to GitHub Pages
