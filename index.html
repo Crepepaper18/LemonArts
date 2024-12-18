@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LemonArts</title>
+    <link rel="stylesheet" href="./Assets/Css/stylesheet.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Pirata+One&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Press+Start+2P&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+<body>
+    <section class="navBar">
+        <div class="nav">
+            <div class="tabs">
+                <div class="logo"><img src="./Assets/Images/Media/logo.png" height="80px" width="80px"></div>
+                <a href="./index.html" class="home">Home</a>
+                <a href="./shop.html" class="shop">Shop</a>
+                <a href="index.html#gallery" class="Gallery">Gallery</a>
+                <a href="./contact.html" class="contactUs">Contact Us</a> 
+            </div>
+            <div class="buttons">
+                <a href="./shop.html"><button class="shopBut But">Shop</button></a>
+                <a href="index.html#footer"><button class="joinBut But">Join</button></a>
+            </div>
+        </div>
+    </section>
+    <section class="hero">
+        <div class="heroImages">
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+
+                  <img src="./Assets/Images/Media/Acrylic ocean 2.jpg" style="width:100%">
+                </div>
+              
+                <div class="mySlides fade">
+                  <img src="./Assets/Images/Media/Acrylic galaxy 1.jpg" style="width:100%">
+                </div>
+              
+                <div class="mySlides fade">
+                  <img src="./Assets/Images/Media/Oilpastel 1.jpg" style="width:100%">
+                </div>
+              
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+              </div>
+              <br>
+              
+              <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+              </div>                                             
+        </div>
+    </section>
+    <section class="feature">
+        <div class="header">Explore the Features of my Art</div>
+        <div class="card">
+        <div class="paintFeature">
+            <div class="f">
+                <div class="painting">
+                    <img src="./Assets/Images/Media/acrylic butterfly1.jpg">
+                </div>
+                <div class="desc">
+                    <div class="heading">Acrylics</div>
+                    <div class="details">
+                        Dive into the vibrant colors of acrylics filled with emotions of the modern world of 21st century
+                    </div>
+                    <a href="shop.html"><button class="fbut">Shop</button></a>
+                </div>
+            </div>
+            <div class="f">
+                <div class="painting">
+                    <img src="./Assets/Images/Media/Oil pastel Starry Night .jpg">
+                </div>
+                <div class="desc">
+                    <div class="heading">Oil Pastels</div>
+                    <div class="details">
+                        Lets escape to the world of dreams and fantasy with some greasy oil pastels
+                    </div>
+                    <a href="#gallery"><button class="fbut">Gallery</button></a>
+                </div>
+            </div>
+            <div class="f">
+                <div class="painting">
+                    <img src="./Assets/Images/Media/Pencil anime 1 from death note.jpg">
+                </div>
+                <div class="desc">
+                    <div class="heading">Pencil Sketch</div>
+                    <div class="details">Sharp and edgy pencils will inspire you to take a look into the world of sketches of memories
+                    </div>
+                   <a href="index.html#gallery"><button class="fbut">Explore</button></a> 
+                </div>
+            </div>
+        </div>
+        </div>    
+    </section>
+    <hr style="width: 90%;">
+    <section class="bio">
+        <div class="div">
+            <div class="bioImage">
+                <img src="./Assets/Images/Media/Acrylic original 1.jpg">
+            </div>
+            <div class="bioText">
+                <span style="font-size: 36px; padding-bottom: 40px; font-weight: bold;" >Hello, This is Lemon, welcome to the Gallery of Vitamin C where healing is done through Art.</span>
+                <span style="font-size:24px; padding-bottom: 20px; font-weight: bold;">Vision:</span>
+                <div class="b1">
+                    <div>
+                        <div style="padding-bottom: 20px; font-weight: bold;" >Grow the Online Gallery:</div>
+                        <div>Our primary goal is to establish this online gallery as a renowned platform, connecting art enthusiasts and collectors worldwide.</div>
+                    </div>
+                    <div>
+                        <div style="padding-bottom: 20px; font-weight: bold;">Host Online Auctions for Charity:</div>
+                        <div>We aim to organize online art auctions to support meaningful causes, combining creativity with compassion to make a positive impact.</div>
+                    </div>
+                </div>
+            </div>    
+        </div>
+        <div class="div">
+            <div class="bioText">
+                <div style="font-size: 36px; padding-bottom: 40px; font-weight: bold;">
+                Beyond showcasing art...
+            </div>
+            <div  style="font-size:24px; padding-bottom: 20px;">
+                I also create unique customized t-shirt designs. Whether you're looking for something personalized or a specific design idea brought to life, I’d be delighted to collaborate and craft something just for you.
+            </div>
+            <div class="buttons">
+                <a href="shop.html#tstudio"><button class="shopBut But">Shop</button></a>
+                <a href="contact.html"><button class="joinBut But">Contact</button></a>
+            </div>
+            </div>
+            <div class="bioImage">
+                <img src="./Assets/Images/Tshirts-20241216T161609Z-001/Tshirts/2.png">
+            </div>
+            
+        </div>
+        <hr hr style="width: 90%;">
+    </section>
+    <section class="box">
+    <div class="header" id="gallery">Gallery</div>    
+    <div class="gallery" id="art">
+        <div class="photo">
+            <div class="gal high" ><img src="./Assets/Images/Media/Acrylic Apple Hyperrealism.jpg">
+                <div class="overlay">
+                    <div class="hover-text">Apple : Have you ever hated something to the point of making a painting of it ?</div>
+                </div>
+            </div>
+            
+            <div class="gal high" style="height: 520px;"><img src="./Assets/Images/Media/Acrylic Butterfly 4.jpg">
+                <div class="overlay">
+                    <div class="hover-text">Bleeding : What color do you bleed while metamorphing like the butterfly ?</div>
+                </div>
+            </div>
+            <div class="gal high"><img src="./Assets/Images/Media/Acrylic Flower Vase.jpg">
+                <div class="overlay">
+                    <div class="hover-text">Plastic : Keeping plastic flowers that never die</div>
+                </div>
+            </div>
+            <div class="gal high"><img src="./Assets/Images/Media/Acrylic Lost Girl.jpg">
+                <div class="overlay">
+                    <div class="hover-text">So far away : What can i do other than just watch you from afar ?</div>
+                </div>
+            </div>
+            <div class="high gal"><img src="./Assets/Images/Media/Sean Zhao_ Xiao Zhan pencil fan art 2.jpg">
+                <div class="overlay">
+                    <div class="hover-text">Sean Xiao / Xiao Zhan : Fan Art</div>
+                </div>
+            </div>
+        </div>
+        <div class="photo">
+            <div class="gal high"><img src="./Assets/Images/Media/acrylic Praying with blood 1.jpg">
+                <div class="overlay">
+                    <div class="hover-text">Hope : praying for a better world</div>
+                </div>
+            </div>
+            
+            <div class="gal wide"><img src="./Assets/Images/Media/Acrylic butterfly 2.jpg">
+                <div class="overlay">
+                    <div class="hover-text">Pink : Obsessed with the color pink to the point where it started to transition into black</div>
+                </div></div>
+            <div class="gal high"><img src="./Assets/Images/Media/Acrylic RadhaKrishna(Krishna) .jpg">
+                <div class="overlay">
+                    <div class="hover-text">Krsna : Two but one</div>
+                </div>
+            </div>
+            <div class="gal wide"><img src="./Assets/Images/Media/Acrylic galaxy 1.jpg">
+                <div class="overlay">
+                    <div class="hover-text">Noise : Aren't noises just pretty colors ?</div>
+                </div>
+            </div>
+            <div class="gal high"><img src="./Assets/Images/Media/Acrylic mountains 1.jpg">
+                <div class="overlay">
+                    <div class="hover-text">Grey : Another boring-calming day !</div>
+                </div>
+            </div>
+            <div class="high gal"><img src="./Assets/Images/Media/Oil pastel Starry Night .jpg">
+                <div class="overlay">
+                    <div class="hover-text">Sky : So close yet so far away, so alive yet dead silent.</div>
+                </div>
+            </div>
+
+        </div>
+        <div class="photo">
+            <div class="gal high"><img src="./Assets/Images/Media/Acrylic original 1.jpg">
+                <div class="overlay">
+                    <div class="hover-text">All seeing eye : Beware someone is always watching!</div>
+                </div>
+            </div>
+            <div class="gal wide"><img src="./Assets/Images/Media/Acrylic ocean 2.jpg">
+                <div class="overlay">
+                    <div class="hover-text">Ocean of Tears : Was it tears or rage that filled the waves that day ?</div>
+                </div>
+            </div>
+            <div class="gal high"><img src="./Assets/Images/Media/Acrylic RadhaKrishna(Radha).jpg">
+                <div class="overlay">
+                    <div class="hover-text">Radha : Two but one</div>
+                </div>
+            </div>
+            <div class="gal wide"><img src="./Assets/Images/Media/Oilpastel 1.jpg">
+                <div class="overlay">
+                    <div class="hover-text">Anxiety : Overwhelmingly melancholic</div>
+                </div>
+            </div>
+            <div class="gal high"><img src="./Assets/Images/Media/Pencil anime 1 from death note.jpg">
+                <div class="overlay">
+                    <div class="hover-text">Death Note : Cappuccino latte Light and Ryuk</div>
+                </div>
+            </div>
+            <div class="high gal"><img src="./Assets/Images/Media/acrylic butterfly1.jpg">
+                <div class="overlay">
+                    <div class="hover-text">Freedom : Freedom is like a butterfly on a autumn sunset</div>
+                </div>
+            </div>
+        </div>
+        <div class="photo">
+            <div class="gal high"><img src="./Assets/Images/Media/Acrylic ocean1.jpg">
+                <div class="overlay">
+                    <div class="hover-text">Blues : If peace had a name, it's called Blue.</div>
+                </div>
+            </div>
+            <div class="gal wide"><img src="./Assets/Images/Media/Acrylic butterfly 3.jpg">
+                <div class="overlay">
+                    <div class="hover-text">Imperfect : Sometimes imperfections are magically attractive</div>
+                </div>
+            </div>
+            <div class="gal high"><img src="./Assets/Images/Media/Acrylic Time.jpg">
+                <div class="overlay">
+                    <div class="hover-text">Time : Tik tok tik tok, hurry up!</div>
+                </div>
+            </div>
+            <div class="gal wide"><img src="./Assets/Images/Media/Oil pastel2.jpg">
+                <div class="overlay">
+                    <div class="hover-text">Beginning : Adi Purush and Adi Sakhti</div>
+                </div>
+            </div>
+            <div class="gal high"><img src="./Assets/Images/Media/Wei wuxiang by Xiao Zhan pencil 1.jpg">
+                <div class="overlay">
+                    <div class="hover-text">Wei Wuxian by Xiao Zhan : Fan Art</div>
+                </div>
+            </div>
+            <div class="high gal"><img src="./Assets/Images/Media/Oil pastel 3.jpg">
+                <div class="overlay">
+                    <div class="hover-text">Blank : Too much waves washing out my mind!</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+    <section class="morePainting">
+        <div class="moreHeader"></div>
+        <div class="paintingSpace"></div>
+    </section>
+    <section class="footer" id="footer">
+        <div class="contact">
+            <div class="con">
+                <div class="h">Contact:</div>
+                <div class="num">
+                    <div class="n" style="font-size: 28px;">Whatsapp:</div>
+                    <div class="number" style="font-size: 20px;">+6290022785
+                    </div>
+                </div>
+                <div class="mail">
+                    <div class="m" style="font-size: 28px;">Email:</div>
+                    <div class="email" style="font-size: 20px;">lemonieartgallery@gmail.com</div>
+                </div>
+            </div>
+            <div class="rightContent">
+                <div class="newsletter">
+                    <div class="nh">Let's Connect!</div>
+                    <div class="connect">
+                        <div class="email">Email:</div>
+                        <div class="form">
+                            <input type="email" class="inbox" placeholder="Enter your email" name="subscribe_email" required>
+                            <div class="jbut">Join</div>
+                        </div> 
+                    </div>
+                </div>
+                <div class="linkList">
+                    <div class="col">
+                    <a href="index.html"  style="text-decoration: none; color: white;">Home</a>
+                    <a href="shop.html" style="text-decoration: none; color: white;">Shop</a>
+                    <a href="https://www.instagram.com/lemonieartgallery?igsh=MWpqaWhkaWpsNnhnag==" style="text-decoration: none; color: white;">Instagram</a> 
+                    </div>
+                    <div class="col">
+                    <a href="contact.html" style="text-decoration: none; color: white;">Contact Us</a>
+                    <a href="index.html#gallery" style="text-decoration: none; color: white;">Gallery</a>
+                    <a href="index.html#footer" style="text-decoration: none; color: white;">Sign Up</a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <hr>
+        <div class="copyright">© 2024 Lemon Arts. Celebrating artistry, originality, and imagination.</div>
+    </section>
+
+<script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+
+    function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
+
+
+    function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+
+</script>
+<script src="api-keys.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        emailjs.init({publicKey:API_KEY});
+
+        document.querySelector('.jbut').addEventListener('click', function () {
+            const fromEmail = document.querySelector('input.inbox').value;
+
+            if (!fromEmail) {
+                alert("Enter the email!");
+                return;
+            }
+
+            emailjs.send(SERVICE_ID, TEMPLATE_ID, {
+                subscriber_email: fromEmail
+            })
+            .then(function (response) {
+                alert("Message sent successfully!");
+                document.querySelector('input[name="subscribe_email"]').value = '';
+                console.log("SUCCESS", response);
+            }, function (error) {
+                alert("Failed to send message. Please try again.");
+                console.log("FAILED", error);
+            });
+        });
+    });
+</script>
+</body>
+</html>
