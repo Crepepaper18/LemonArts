@@ -349,7 +349,7 @@ function showSlides(n) {
 
 <script>
     document.addEventListener("DOMContentLoaded", function() {
-        emailjs.init({publicKey:"S7jrWKBSRQTiq_SOp"});
+        emailjs.init({publicKey:"cDRtZ7yOUtZmuu5Bg"});
 
         document.querySelector('.jbut').addEventListener('click', function () {
             const fromEmail = document.querySelector('input.inbox').value;
@@ -359,7 +359,7 @@ function showSlides(n) {
                 return;
             }
 
-            emailjs.send("service_lv9syzr", "template_z899mue", {
+            emailjs.send("service_67w7tha", "template_0zawazj", {
                 subscriber_email: fromEmail
             })
             .then(function (response) {
