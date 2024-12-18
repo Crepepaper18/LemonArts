@@ -56,13 +56,13 @@ input
     font-size: 20px;
 }
 
-#name
+.label
 {
     font-weight: bold;
     font-size: 20px;
 }
 
-button
+.submit
 {
     width: 30%;
     height: 40px;
@@ -72,12 +72,12 @@ button
     font-size: 20px;
 }
 
-button:hover
+.submit:hover
 {
     transform: scale(0.95);
 }
 
-button:active
+.submit:active
 {
     opacity: 0.5;
 }

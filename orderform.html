@@ -8,29 +8,30 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Pirata+One&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Press+Start+2P&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </head>
 <body>
     <section class="form">
         <div class="heading">Fill the details below</div>
         <div class="details">
             <div class="field">
-                <div id="name">Name:</div>
-                <input type="text" id="identity">
+                <div class="label">Name:</div>
+                <input type="text" id="identity" name="name">
             </div>
             <div class="field">
-                <div id="name">Contact Number:</div>
-                <input type="text" id="contactNo">
+                <div  class="label">Contact Number:</div>
+                <input type="text" id="contactNo" name="contact">
             </div>
             <div class="field">
-                <div id="name">Email:</div>
-                <input type="text" id="email">
+                <div  class="label">Email:</div>
+                <input type="text" id="email" name="email">
             </div>
             <div class="field">
-                <div id="name">Product:</div>
-                <input type="text" id="productName">
+                <div  class="label">Product:</div>
+                <input type="text" id="productName" name="prodName">
             </div>
         </div>
-        <button>Submit</button>
+        <button class="submit">Submit</button>
         
     </section>
     <script>
@@ -48,6 +49,37 @@
             document.getElementById("productName").value = decodeURIComponent(productName);;
         }
     </script>
-    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            emailjs.init({publicKey:"S7jrWKBSRQTiq_SOp"});
+
+            document.querySelector('.submit').addEventListener('click', function () {
+                const fromName = document.querySelector('input[name="name"]').value;
+                const fromContact = document.querySelector('input[name="contact"]').value;
+                const fromEmail = document.querySelector('input[name="email"]').value;
+                const pName = document.querySelector('input[name="prodName"]').value;
+
+                if (!fromName || !fromEmail || !fromContact || !pName) {
+                    alert("All fields are required!");
+                    return;
+                }
+
+                emailjs.send("service_q3mlrnr", "template_kwmj08a", {
+                    product_name: pName,
+                    from_mail: fromEmail,
+                    name: fromName
+                })
+                .then(function (response) {
+                    alert("Order Placed! Check your mail.");
+                    window.location.href = 'shop.html';
+                    console.log("SUCCESS", response);
+                }, function (error) {
+                    alert("Order failed. Please try again");
+                    window.location.href = 'shop.html';
+                    console.log("FAILED", error);
+                });
+            });
+        });
+    </script>
 </body>
 </html>
