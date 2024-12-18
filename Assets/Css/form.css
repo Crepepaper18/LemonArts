@@ -1,0 +1,83 @@
+body
+{
+    margin: 0;
+    font-family: 'Inter';
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form
+{
+    width: 30%;
+    height: 80%;
+    box-shadow: 2px 2px 2px rgb(115, 115, 115);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap:30px;
+    border: 1px solid black;
+}
+
+.field
+{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.heading
+{
+    font-size: 28px;
+    color: white;
+    background-color: black;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0 20px 0;
+}
+
+.details
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:20px;
+}
+
+input
+{
+    height: 40px;
+    font-size: 20px;
+}
+
+#name
+{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+button
+{
+    width: 30%;
+    height: 40px;
+    color: white;
+    background-color: black;
+    transition: transform 0.3s ease;
+    font-size: 20px;
+}
+
+button:hover
+{
+    transform: scale(0.95);
+}
+
+button:active
+{
+    opacity: 0.5;
+}
