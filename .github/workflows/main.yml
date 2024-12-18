@@ -1,0 +1,29 @@
+name: Deploy Static Site
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Check out the repository code
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      # Step 2: Create `api-keys.js` file dynamically
+      - name: Create `api-keys.js`
+        run: |
+          echo "const API_KEY = '${{ secrets.API_KEY }}';" > api-keys.js
+          echo "const SERVICE_ID = '${{ secrets.SERVICE_ID }}';" >> api-keys.js
+           echo "const TEMPLATE_ID = '${{ secrets.TEMPLATE_ID }}';" >> api-keys.js
+
+      # Step 3: Deploy the site (GitHub Pages Example)
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./  # Directory containing your HTML, CSS, and JS files
