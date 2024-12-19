@@ -56,7 +56,7 @@
             
             <div class="buttons cta">
                 <a href="orderform.html?product=Apple"><button class="shopBut But">Buy</button></a>
-                <a href="#"><button class="joinBut But">View</button></a>
+                <a href="./Assets/Images/Media/Acrylic Apple Hyperrealism.jpg"><button class="joinBut But">View</button></a>
             </div>
         </div>
     </section>
@@ -272,11 +272,11 @@
         for(let i=0; i< length ;i++)
         document.querySelectorAll(".sbut")[i].addEventListener("click", function (){
             const img = this.closest(".c1");
-            const imgUrl = img.querySelector("img").attributes.src.value;
-            
+            const imgUrl = img.querySelector("img").attributes.src.value; 
+            document.querySelector(".product img").attributes.src.value = imgUrl;
             document.querySelector(".product img").attributes.src.value = imgUrl;
             document.querySelector(".description .name").innerHTML = paintName[i];
-
+            document.querySelector(".description .joinBut").parentElement.attributes.href.value = imgUrl;
             const buyButton = document.querySelector(".description .shopBut");
             buyButton.parentElement.href = `orderform.html?product=${encodeURIComponent(paintName[i])}`;
 
