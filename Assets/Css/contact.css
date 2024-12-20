@@ -243,45 +243,62 @@ hr
 }
 
 @media (max-width: 768px) {
-    .nav .tabs {
+    .nav {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
     }
 
-    .form .signUp {
+    .tabs {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .buttons {
+        text-align: center;
+    }
+
+    .signUp {
         flex-direction: column;
     }
 
-    .form .signUp .can, 
-    .form .signUp .f {
-        flex: 1 1 100%;
+    .num {
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
-    .footer .linkList {
+    .footer .contact {
         flex-direction: column;
     }
 }
 
+/* Media Query for Mobile Devices */
 @media (max-width: 480px) {
     .navBar {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
+    }
+
+    .tabs > a {
+        font-size: 14px;
+    }
+
+    .main {
+        font-size: 24px;
+    }
+
+    .p {
+        font-size: 14px;
+    }
+
+    .footer .contact, .footer .linkList {
+        font-size: 14px;
     }
 
     .form .heading .main {
-        font-size: 18px;
+        font-size: 20px;
     }
 
     .form .heading .p {
-        font-size: 14px;
-    }
-
-    .form .field input, 
-    .form .field textarea {
-        font-size: 14px;
-    }
-
-    .footer .linkList {
-        text-align: center;
+        font-size: 12px;
     }
 }
