@@ -241,3 +241,47 @@ hr
     margin-top:20px;
     padding-bottom: 20px;
 }
+
+@media (max-width: 768px) {
+    .nav .tabs {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .form .signUp {
+        flex-direction: column;
+    }
+
+    .form .signUp .can, 
+    .form .signUp .f {
+        flex: 1 1 100%;
+    }
+
+    .footer .linkList {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .navBar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .form .heading .main {
+        font-size: 18px;
+    }
+
+    .form .heading .p {
+        font-size: 14px;
+    }
+
+    .form .field input, 
+    .form .field textarea {
+        font-size: 14px;
+    }
+
+    .footer .linkList {
+        text-align: center;
+    }
+}
