@@ -12,17 +12,31 @@
 <body>
     <section class="navBar">
         <div class="nav">
+            <div class="logo">
+                <img src="./Assets/Images/Media/logo.png" height="80px" width="80px">
+            </div>
             <div class="tabs">
-                <div class="logo"><img src="./Assets/Images/Media/logo.png" height="80px" width="80px"></div>
                 <a href="./index.html" class="home">Home</a>
                 <a href="./shop.html" class="shop">Shop</a>
                 <a href="index.html#gallery" class="Gallery">Gallery</a>
-                <a href="./contact.html" class="contactUs">Contact Us</a> 
+                <a href="./contact.html" class="contactUs">Contact Us</a>
             </div>
             <div class="buttons">
                 <a href="./shop.html"><button class="shopBut But">Shop</button></a>
                 <a href="index.html#footer"><button class="joinBut But">Join</button></a>
             </div>
+            <div class="hamburger" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
+        <div class="mobile-menu">
+            <div class="close-btn" onclick="toggleMenu()">×</div>
+            <a href="./index.html" class="home">Home</a>
+            <a href="./shop.html" class="shop">Shop</a>
+            <a href="index.html#gallery" class="Gallery">Gallery</a>
+            <a href="./contact.html" class="contactUs">Contact Us</a>
         </div>
     </section>
     <section class="prodDisplay">
@@ -55,14 +69,15 @@
             
             
             <div class="buttons cta">
-                <a href="orderform.html?product=Apple"><button class="shopBut But">Buy</button></a>
-                <a href="./Assets/Images/Media/Acrylic Apple Hyperrealism.jpg"><button class="joinBut But">View</button></a>
+                <a href="orderform.html?product=Apple"><button class="shopBut But q">Buy</button></a>
+                <a href="./Assets/Images/Media/Acrylic Apple Hyperrealism.jpg"><button class="joinBut But q">View</button></a>
             </div>
         </div>
     </section>
     <hr style="margin:20px 0 60px 0; width: 100%; display: flex; justify-content: center; ">
     <section class="market">
         <div class="prodCardsCol">
+            <div style="margin: 20px; font-size: 36px; font-weight: bold; display: flex; justify-content: center;" class="topic">Paintings</div>
             <div class="prodCardsRow">
                 <div class="c1">
                     <div class="painting"><img src="./Assets/Images/Media/Acrylic Apple Hyperrealism.jpg"></div>
@@ -85,7 +100,6 @@
                 <div class="feature">
                     <div class="title">Pink</div>
                     <div class="cost">₹500.00<button class="shopBut But sbut">View</button></div>
-                    
                 </div>
             </div>
             <div class="c1">
@@ -285,6 +299,11 @@
                 behavior:"smooth"
             })
         })
+
+        function toggleMenu() {
+        const mobileMenu = document.querySelector('.mobile-menu');
+        mobileMenu.classList.toggle('active');
+    }
     </script>
 </body>
 </html>

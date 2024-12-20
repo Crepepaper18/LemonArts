@@ -81,3 +81,12 @@ input
 {
     opacity: 0.5;
 }
+
+@media (max-width: 768px) {
+    .form
+    {
+        transform: scale(0.8);
+        width: 100%;
+        height: 100%;
+    }
+}

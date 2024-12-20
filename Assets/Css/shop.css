@@ -142,6 +142,11 @@ hr
     gap:100px;
 }
 
+.topic
+{
+    display: none;
+}
+
 .product
 {
     width: 500px;
@@ -239,4 +244,193 @@ hr
 
 .sbut{
     margin-top: 30px;
+}
+
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    gap: 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: white;
+    width: 200px;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2px 2px 2px rgb(130, 130, 130);
+    z-index: 3;
+}
+
+.close-btn {
+    font-size: 30px;
+    color: black;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: space-around;
+    height: 30px;
+    width: 30px;
+}
+
+.hamburger .bar {
+    width: 30px;
+    height: 5px;
+    background-color: black;
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    body
+    {
+        width: 100%;
+    }
+    .But
+    {
+        display: none;
+    }
+    .tabs {
+        display: none;  
+    }
+
+    .hamburger {
+        display: flex;  
+        margin-top: 30px;
+    }
+
+    .mob, .product, .prodCardsRow
+    {
+        width: 100%;
+    }
+
+    .prodDisplay
+    {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: flex-start;
+        margin-top: 0;
+        margin-bottom: 0;
+        gap:0;
+    }
+
+    .product img
+    {
+        height: 400px;
+        margin-bottom: 20px;
+    }
+
+    .prodCardsCol
+    {
+        gap:0;
+    }
+
+    .prodCardsRow
+    {
+        gap:40px;
+        transform: scale(0.8);
+        height: 320px;
+    }
+
+    .painting
+    {
+        height: 200px;
+    }
+
+    .cta
+    {
+        margin: 0;
+        padding-right: 0;
+        align-self:center ;
+    }
+
+    .q
+    {
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    .description
+    {
+        padding: 0;
+        text-align: center;
+        align-self: center;
+        border: none;
+        justify-content: center;
+    }
+    
+    .c1
+    {
+        height: 100%;
+    }
+
+    .footer
+    {
+        flex-direction: column;
+        font-size:small ;
+        padding-top: 20px;
+    }
+
+    .con
+    {
+        display: none;
+    }
+    
+    .h, .num
+    {
+        margin: 0;
+    }
+
+    .contact
+    {
+        margin:  20px 0 20px 0;
+        width: 100%;
+    }
+
+    .email
+    {
+        display: none;
+    }
+    
+    .linkList
+    {
+        justify-content: center;
+    }
+
+    .sbut
+    {
+        display: block;
+        margin: 0;
+    }
+
+    .cost
+    {
+        display: flex;
+    }
+}
+
+.mobile-menu.active {
+    display: flex;
+}
+
+.mobile-menu a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    padding: 20px 0 20px 0;
+    text-align: center;
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+}
+
+.mobile-menu a:hover {
+    background-color: #f1f1f1;
 }
