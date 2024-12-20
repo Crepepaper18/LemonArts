@@ -242,181 +242,152 @@ hr
     padding-bottom: 20px;
 }
 
-@media (max-width: 768px) {
-    .nav {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .tabs {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .buttons {
-        text-align: center;
-    }
-
-    .signUp {
-        flex-direction: column;
-    }
-
-    .num {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .footer .contact {
-        flex-direction: column;
-    }
-}
-
-body {
-    margin: 0;
-    font-family: 'Inter', sans-serif;
-    overflow-x: hidden;
-}
-
-.nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-}
-
-.tabs {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 10px;
-}
-
-.logo img {
-    height: auto;
-    width: 60px;
-}
-
-.tabs > a {
-    font-size: 16px;
-    margin-right: 15px;
-}
-
-.buttons .But {
-    padding: 8px;
-    width: auto;
-    font-size: 14px;
-}
-
-/* Responsive Form Section */
-.form {
-    height: auto;
-    padding: 40px 20px;
-    background: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url("../Images/Media/Oilpastel\ 1.jpg") no-repeat center center/cover;
-}
-
-.main {
-    font-size: 32px;
-    text-align: center;
-}
-
-.p {
-    font-size: 16px;
-    margin-top: 10px;
-    text-align: center;
-}
-
-.signUp {
-    display: flex;
+/* Hide the mobile menu by default */
+.mobile-menu {
+    display: none;
     flex-direction: column;
     gap: 20px;
-}
-
-.can, .f {
-    width: 100%;
-}
-
-.f input, .f textarea, input.submit {
-    width: 100%;
-    font-size: 14px;
-}
-
-textarea.message {
-    height: 150px;
-}
-
-/* Responsive Footer */
-.footer .contact {
-    flex-wrap: wrap;
-    gap: 20px;
-    text-align: center;
-}
-
-.footer .linkList {
-    flex-wrap: wrap;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: white;
+    width: 200px;
+    height: 100vh;
     justify-content: center;
-    gap: 20px;
+    align-items: center;
+    box-shadow: 2px 2px 2px rgb(130, 130, 130);
 }
 
-/* Media Query for Tablets */
+.close-btn {
+    font-size: 30px;
+    color: black;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+}
+
+/* Hamburger icon */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: space-around;
+    height: 30px;
+    width: 30px;
+}
+
+.hamburger .bar {
+    width: 30px;
+    height: 5px;
+    background-color: black;
+    border-radius: 5px;
+}
+
+/* Show hamburger on mobile screens */
 @media (max-width: 768px) {
-    .nav {
-        flex-direction: column;
-        align-items: center;
+    body
+    {
+        width: 100%;
     }
-
+    .But
+    {
+        display: none;
+    }
     .tabs {
-        flex-direction: column;
-        align-items: center;
+        display: none;  /* Hide regular menu */
     }
 
-    .buttons {
+    .hamburger {
+        display: flex;  /* Show hamburger icon */
+        margin-top: 30px;
+    }
+
+    .pc
+    {
+        display: none;
+    }
+    
+    .form
+    {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .heading
+    {
+        font-size: smaller;
         text-align: center;
     }
 
-    .signUp {
+    .signUp{
+
         flex-direction: column;
+        height: 100%;
     }
 
-    .num {
-        flex-wrap: wrap;
-        justify-content: center;
+    .f
+    {
+        width: 100%;
+        margin: 0;
     }
 
-    .footer .contact {
+    .field
+    {
+        width: 100%;
+    }
+
+    .mob
+    {
+        width: 100%;
+    }
+
+    .footer
+    {
         flex-direction: column;
+        font-size:small ;
+        padding-top: 20px;
+    }
+
+    .con
+    {
+        display: none;
+    }
+    
+    .h, .num
+    {
+        margin: 0;
+    }
+
+    .can
+    {
+        margin-bottom: 20px;
+    }
+
+    .contact
+    {
+        margin:  20px 0 20px 0;
     }
 }
 
-/* Media Query for Mobile Devices */
-@media (max-width: 480px) {
-    .navBar {
-        flex-direction: column;
-        align-items: center;
-    }
+/* Show the mobile menu when it's active */
+.mobile-menu.active {
+    display: flex;
+}
 
-    .tabs > a {
-        font-size: 14px;
-    }
+/* Mobile menu links */
+.mobile-menu a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    padding: 20px 0 20px 0;
+    text-align: center;
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+}
 
-    .main {
-        font-size: 24px;
-    }
-
-    .p {
-        font-size: 14px;
-    }
-
-    .footer .contact, .footer .linkList {
-        font-size: 14px;
-    }
-
-    .form .heading .main {
-        font-size: 20px;
-    }
-
-
-    .form .heading .p {
-        font-size: 12px;
-    }
+.mobile-menu a:hover {
+    background-color: #f1f1f1;
 }

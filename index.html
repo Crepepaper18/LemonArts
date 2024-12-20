@@ -13,17 +13,32 @@
 <body>
     <section class="navBar">
         <div class="nav">
+            <div class="logo">
+                <img src="./Assets/Images/Media/logo.png" height="80px" width="80px">
+            </div>
             <div class="tabs">
-                <div class="logo"><img src="./Assets/Images/Media/logo.png" height="80px" width="80px"></div>
                 <a href="./index.html" class="home">Home</a>
                 <a href="./shop.html" class="shop">Shop</a>
                 <a href="index.html#gallery" class="Gallery">Gallery</a>
-                <a href="./contact.html" class="contactUs">Contact Us</a> 
+                <a href="./contact.html" class="contactUs">Contact Us</a>
             </div>
             <div class="buttons">
                 <a href="./shop.html"><button class="shopBut But">Shop</button></a>
                 <a href="index.html#footer"><button class="joinBut But">Join</button></a>
             </div>
+            <!-- Hamburger Icon -->
+            <div class="hamburger" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
+        <div class="mobile-menu">
+            <div class="close-btn" onclick="toggleMenu()">×</div>
+            <a href="./index.html" class="home">Home</a>
+            <a href="./shop.html" class="shop">Shop</a>
+            <a href="index.html#gallery" class="Gallery">Gallery</a>
+            <a href="./contact.html" class="contactUs">Contact Us</a>
         </div>
     </section>
     <section class="hero">
@@ -47,7 +62,7 @@
               </div>
               <br>
               
-              <div style="text-align:center">
+              <div style="text-align:center" class="slider">
                 <span class="dot" onclick="currentSlide(1)"></span>
                 <span class="dot" onclick="currentSlide(2)"></span>
                 <span class="dot" onclick="currentSlide(3)"></span>
@@ -267,10 +282,6 @@
         </div>
     </div>
     </section>
-    <section class="morePainting">
-        <div class="moreHeader"></div>
-        <div class="paintingSpace"></div>
-    </section>
     <section class="footer" id="footer">
         <div class="contact">
             <div class="con">
@@ -371,6 +382,11 @@ function showSlides(n) {
             });
         });
     });
+
+    function toggleMenu() {
+        const mobileMenu = document.querySelector('.mobile-menu');
+        mobileMenu.classList.toggle('active');
+    }
 </script>
 </body>
 </html>
